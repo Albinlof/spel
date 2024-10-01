@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zombie Spelet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game">
+        <h1>Zombie Spelet</h1>
+
+        <!-- Lobby-formulär -->
+        <div id="lobbyForm">
+            <input type="text" id="playerNameInput" placeholder="Skriv ditt namn">
+            <input type="text" id="lobbyCodeInput" placeholder="Lobbykod (4 siffror)">
+            <button id="joinLobbyBtn">Gå med i lobby</button>
+        </div>
+
+        <div id="status"></div>
+        <div id="playerList"></div>
+        <button id="startGameBtn" style="display:none;">Starta Spelet</button>
+
+        <!-- Spelbräde -->
+        <div id="gameBoard" style="display:none;">
+            <h2 id="phaseTitle">Väntar på att spelet ska starta</h2>
+            <div id="roleImage"></div>
+            <p id="instructions"></p>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
