@@ -161,6 +161,6 @@ function getGameResult(lobbyCode) {
         return "Maffian har vunnit! Maffian har uppnått numerär överlägsenhet.";
     }
 }
-server.listen(PORT, () => {
-    console.log(`Servern körs på http://localhost:${PORT}`);
+server.listen(PORT, '0.0.0.0', () => {
+    console.log(`Servern körs på http://0.0.0.0:${PORT}`);
 });
